@@ -67,3 +67,14 @@ bash tools/dist_test.sh \
 ```
 
 Replace `/path/to/checkpoint_file` with the path to the trained model checkpoint you want to evaluate, and replace `GPU_NUM` with the number of GPUs to use.
+
+## Results
+
+The performance comparison between SegMAN-T and BLH-Seg on ADE20K, Cityscapes, and COCO-Stuff is presented below.
+
+| Model | Params (M) | ADE20K GFLOPs | ADE20K mIoU (%) | Cityscapes GFLOPs | Cityscapes mIoU (%) | COCO-Stuff GFLOPs | COCO-Stuff mIoU (%) |
+|:--|--:|--:|--:|--:|--:|--:|--:|
+| SegMAN-T | 6.4 | 6.2 | 43.0 | 52.5 | **80.3** | 6.2 | 41.3 |
+| **BLH-Seg** | 6.5 | 6.0 | **44.3** | 51.0 | 79.9 | 6.0 | **41.6** |
+
+**Note:** Params denotes the number of model parameters in millions. GFLOPs denotes the computational complexity, and mIoU denotes mean Intersection over Union. For the trained BLH-Seg model checkpoints, please refer to [Model Checkpoints](#model-checkpoints) above.
